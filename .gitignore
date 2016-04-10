@@ -9,3 +9,5 @@ logs/
 
 release.properties
 pom.xml.releaseBackup
+
+.idea
