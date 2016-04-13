@@ -13,7 +13,11 @@ lazy val commonSettings = Seq(
   autoScalaLibrary   := false,
   crossPaths         := false,
   javacOptions                   := basicJavaOpts ++ Seq("-encoding", "utf8", "-Xlint:unchecked", "-target", "1.6"),
-  javacOptions in (Compile, doc) := basicJavaOpts,  // doesn't eat `-encoding` or `target`
+  javacOptions in (Compile, doc) := {
+    val js  = sys.props("java.version")
+    val jsd = js.substring(0, js.indexOf(".", 2)).toDouble
+    if (jsd < 1.8) basicJavaOpts else basicJavaOpts :+ "-Xdoclint:none"
+  },  // doesn't eat `-encoding` or `target`
   description        := "A window docking framework for Swing",
   homepage           := Some(url(s"https://github.com/Sciss/$githubName")),
   licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
