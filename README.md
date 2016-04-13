@@ -17,7 +17,7 @@ Scala world.
 
 ## Published artifacts
 
-WebLaF can be used in your maven project using the following information:
+DockingFrames can be used in your maven project using the following information:
 
     <dependency>
       <groupId>de.sciss</groupId>
