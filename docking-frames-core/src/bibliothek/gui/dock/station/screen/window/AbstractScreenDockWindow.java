@@ -703,6 +703,10 @@ public abstract class AbstractScreenDockWindow extends DisplayerScreenDockWindow
         private Rectangle bounds;
         private MagnetizedOperation attraction;
 
+        private Listener() {
+            updateBorder();
+        }
+
         private void updateBorder(){
         	if( border != null ){
         		if( pressed ){

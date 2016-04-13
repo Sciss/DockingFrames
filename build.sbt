@@ -7,15 +7,16 @@ name := baseName
 def basicJavaOpts = Seq("-source", "1.6")
 
 lazy val commonSettings = Seq(
-  version            := "0.1.0-SNAPSHOT",
+  version            := "2.0.0",
   organization       := "de.sciss",
   scalaVersion       := "2.11.8",
   autoScalaLibrary   := false,
   crossPaths         := false,
-  javacOptions                   := basicJavaOpts ++ Seq("-encoding", "utf8", "-Xlint:unchecked", "-target", "1.6"),
+  javacOptions       := basicJavaOpts ++ Seq("-encoding", "utf8", "-Xlint:unchecked", "-target", "1.6"),
   javacOptions in (Compile, doc) := {
     val js  = sys.props("java.version")
     val jsd = js.substring(0, js.indexOf(".", 2)).toDouble
+    // this is needed for Java 8
     if (jsd < 1.8) basicJavaOpts else basicJavaOpts :+ "-Xdoclint:none"
   },  // doesn't eat `-encoding` or `target`
   description        := "A window docking framework for Swing",

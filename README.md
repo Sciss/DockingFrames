@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Sciss/DockingFrames.svg?branch=sbtfied)](https://travis-ci.org/Sciss/DockingFrames)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/docking-frames-common/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/docking-frames-common)
+[![Build Status](https://travis-ci.org/Sciss/DockingFrames.svg?branch=master)](https://travis-ci.org/Sciss/DockingFrames)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/docking-frames/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/docking-frames)
 
 # DockingFrames
 
@@ -21,15 +21,15 @@ DockingFrames can be used in your maven project using the following information:
 
     <dependency>
       <groupId>de.sciss</groupId>
-      <artifactId>docking-frames-common</artifactId>
-      <version>{v}</version>
+      <artifactId>docking-frames</artifactId>
+      <version>2.0.0</version>
     </dependency>
 
 Or in an sbt based project:
 
-    "de.sciss" % "docking-frames-common" % v
+    "de.sciss" % "docking-frames" % "2.0.0"
 
-The current version `v` is `"0.1.0"` (no relation to original DockingFrames project version).
+The version has no relation to original DockingFrames project version.
 
 ## Building
 
