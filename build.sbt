@@ -47,6 +47,9 @@ lazy val root = Project(id = baseNameL, base = file("."))
 
 lazy val coreProject = Project(id = s"$baseNameL-core", base = file("core"))
   .settings(commonSettings)
+  .settings(
+    unmanagedSourceDirectories in Compile += baseDirectory.value.getParentFile / s"$baseNameL-core" / "src-j6"
+  )
 
 lazy val commonProject = Project(id = s"$baseNameL-common", base = file("common"))
   .dependsOn(coreProject)

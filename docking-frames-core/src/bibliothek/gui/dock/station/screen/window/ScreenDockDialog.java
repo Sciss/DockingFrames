@@ -91,6 +91,7 @@ public class ScreenDockDialog extends AbstractScreenDockWindow {
         if( undecorated ){
             dialog.setUndecorated( true );
             dialog.getRootPane().setWindowDecorationStyle( JRootPane.NONE );
+            dialog.pack();  // N.B. required for Linux
         }
         
         dialog.setDefaultCloseOperation( JDialog.DO_NOTHING_ON_CLOSE );
